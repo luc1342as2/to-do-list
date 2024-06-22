@@ -11,6 +11,7 @@ function addTask(){
         listContainer.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
+        span.className = "remove-button";
         li.appendChild(span);
     }
     inputBox.value = "";
@@ -20,10 +21,14 @@ function addTask(){
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+        if (e.target.classList.contains("checked")) {
+            alert("Activity completed");
+        }
         saveData();
     }
-    else if(e.target.tagName === "SPAN"){
+    else if(e.target.tagName === "SPAN" && e.target.className === "remove-button"){
         e.target.parentElement.remove();
+        alert("Element removed");
         saveData();
     }
 }, false);
@@ -31,6 +36,7 @@ listContainer.addEventListener("click", function(e){
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML);
 }
+
 function showTask(){
     listContainer.innerHTML = localStorage.getItem("data");
 }
