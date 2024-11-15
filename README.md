@@ -1,2 +1,3 @@
-# to-do-list
-To-do list
+To-Do List Application in HTML, CSS, and JavaScript
+
+This project is a simple and interactive To-Do List application built with HTML, CSS, and JavaScript, designed to help users manage tasks efficiently. Users can add, edit, and delete tasks, mark them as completed, and filter tasks based on their status. JavaScript powers the functionality, ensuring that task data is dynamically updated and stored in the browser. HTML and CSS provide a clean, responsive interface, making it easy for users to stay organized. This project showcases skills in creating interactive, data-driven web applications with JavaScript.
